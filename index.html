@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	 <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
 </head>
 <body>
 
@@ -28,7 +30,7 @@
 			<a href="#S2" class="btn">SERVICES</a>
 			<a href="#S3" class="btn">ABOUT</a>
 			<a href="#S4" class="btn">PREMIUM</a>
-			<a href="#S5" class="btn">DOWNLOAD</a>
+			<a href="#S5" class="btn">LOGIN</a>
 		</div>
 	</div>
 </section>
@@ -54,7 +56,37 @@
 
 <div class="mains banner-5" id="S5">
 	<div class="box-5">
-		<h1 class="title-2">hello</h1>
+			<form class="login-form" id="login-form">
+			<p class="login-head">Login</p>
+			<div class="mail-head">
+				<ion-icon name="mail-outline" class="mail-icon1"></ion-icon>
+				<input type="email" name="email" placeholder="your email..." required>
+			</div>
+			<div class="mail-head">
+			<ion-icon name="lock-closed-outline" class="pswd-icon1"></ion-icon>
+			<input type="password" name="" placeholder="your password..." required>
+			</div>
+			<button type="submit">Submit</button>
+			<a class="login-bottom" onclick="myFunction2()">Don't have an account! Register now.</a>
+			</form>
+
+			<form class="register-form" id="register-form">
+			<p class="login-head">Register</p>
+			<div class="mail-head">
+			<ion-icon name="person-add-outline" class="user-icon1"></ion-icon>
+			<input type="text" name="name" placeholder="your username" required>
+			</div>
+			<div class="mail-head">
+				<ion-icon name="mail-outline" class="mail-icon1"></ion-icon>
+				<input type="email" name="email" placeholder="your email..." required>
+			</div>
+			<div class="mail-head">
+			<ion-icon name="lock-closed-outline" class="pswd-icon1"></ion-icon>
+			<input type="password" name="" placeholder="create your password..." required>
+			</div>
+			<button type="submit">Submit</button>
+			<a class="login-bottom" onclick="myFunction3()">Already have an account! Login now.</a>
+			</form>
 	</div>
 </div>
 
@@ -72,6 +104,20 @@
 }
 }
 
+function myFunction2() {
+		  var x = document.getElementById("register-form");
+		  var y = document.getElementById("login-form");
+		  x.style.display = 'block';
+		  y.style.display = 'none';
+}
+
+function myFunction3() {
+		  var x = document.getElementById("register-form");
+		  var y = document.getElementById("login-form");
+		  x.style.display = 'none';
+		  y.style.display = 'block';
+}
+
   var header = document.getElementById("myDIV");
   var btns = header.getElementsByClassName("btn");
   for ( var i = 0; i < btns.length; i++ ){
@@ -86,6 +132,8 @@
 
 </script>
 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
